@@ -12,7 +12,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/lisa/device.mk)
 
 # Inherit some common PixelOS stuff
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
@@ -21,7 +21,11 @@ TARGET_SUPPORTS_QUICK_TAP := true
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := lisa
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := aosp_lisa
+PRODUCT_NAME := cherish_lisa
 PRODUCT_MODEL := Xiaomi 11 Lite NE
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.cherish.maintainer=TusharInd007
+CHERISH_BUILD_TYPE := UNOFFICIAL
